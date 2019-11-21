@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'Mobile_app' do
-  # Pods for Mobile_app
+target 'Food_001' do
+  # Pods for Food_001
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,7 +34,11 @@ target 'Mobile_app' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'Mobile_appTests' do
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  target 'Food_001Tests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -42,10 +46,10 @@ target 'Mobile_app' do
   use_native_modules!
 end
 
-target 'Mobile_app-tvOS' do
-  # Pods for Mobile_app-tvOS
+target 'Food_001-tvOS' do
+  # Pods for Food_001-tvOS
 
-  target 'Mobile_app-tvOSTests' do
+  target 'Food_001-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
